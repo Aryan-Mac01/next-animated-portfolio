@@ -90,9 +90,10 @@ const CustomLink = ({href, title, className=""}) => {
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
+    //px-32
 return (
     <header
-    className='w-full px-32 py-8 font-medium flex items-center justify-between'
+    className='w-full py-8 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 font-medium flex items-center justify-between'
     >
 
         <nav>
