@@ -4,6 +4,7 @@ import Logo from '../Logo/Logo'
 import { useRouter } from 'next/router'
 import { TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon } from '../Icons/Icons'
 import { motion } from 'framer-motion'
+import TransitionProvider from '../TransitionProvider/TransitionProvider'
 
 const CustomLink = ({href, title, className=""}) => {
     const router = useRouter();
@@ -20,6 +21,7 @@ const CustomLink = ({href, title, className=""}) => {
         </Link>
     )
 }
+
 
 const Navbar = () => {
 return (
@@ -42,14 +44,14 @@ return (
             >
                 <TwitterIcon/>
             </motion.a>
-            <motion.a href="https://github.com" target = {"_blank"}
+            <motion.a href="https://github.com/Aryan-Mac01" target = {"_blank"}
             whileHover={{y:-2}}
             className='w-6 mx-3'
             whileTap={{scale:0.9}}
             >
                 <GithubIcon/>
             </motion.a>
-            <motion.a href="https://www.linkedin.com" target = {"_blank"}
+            <motion.a href="https://www.linkedin.com/in/aryan-mishra-931214243/" target = {"_blank"}
             whileHover={{y:-2}}
             className='w-6 mx-3'
             whileTap={{scale:0.9}}

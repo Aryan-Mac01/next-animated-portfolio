@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import TransitionProvider from "../TransitionProvider/transitionProvider";
+import Navbar from "../Navbar/Navbar";
+import { Montserrat } from "next/font/google";
 
-const Layout = ({children, className=""}) => {
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-mont",
+}); 
+
+const Layout = ({ children, className = "" }) => {
   return (
-    <div className={`w-full h-full inline-block z-0 bg-gradient-to-b from-blue-50 to-red-100 p-32 ${className}`}>
+    <TransitionProvider
+      className={`w-full h-full inline-block z-0 bg-gradient-to-b from-blue-50 to-red-100 p-32 ${className}`}
+    >
       {children}
-    </div>
-  )
-}
+    </TransitionProvider>
+  );
+};
 
-export default Layout
+export default Layout;
